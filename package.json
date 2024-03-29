@@ -1,8 +1,5 @@
 {
   "name": "pg-graphql-example",
-  "workspaces": [
-    "app"
-  ],
   "private": true,
   "devDependencies": {
     "@graphql-codegen/cli": "2.13.1",
