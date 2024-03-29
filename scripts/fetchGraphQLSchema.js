@@ -63,7 +63,5 @@ fetchGraphQLSchema(`${process.env.SUPABASE_URL}/graphql/v1`, {
 }).then((schema) => {
   fs.writeFileSync(filePath, schema, "utf-8");
   console.log(supagradient(`✨  Saved to ${filePath}`));
-  console.log(
-    '💡  Be sure to run "yarn run codegen" to generate latest types.'
-  );
+  console.log('💡  Be sure to run "npx run codegen" to generate latest types.');
 });

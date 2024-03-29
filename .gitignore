@@ -1,6 +1,16 @@
 .idea
 .DS_Store
 .env
+
+**/.env*
+
 .env.production
 yarn-error.log
 node_modules
+
+
+.nx/cache
+
+# Next.js
+.next
+out

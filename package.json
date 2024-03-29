@@ -1,13 +1,17 @@
 {
-  "name": "pg-graphql-example",
+  "name": "yoyojudge",
   "private": true,
   "devDependencies": {
     "@graphql-codegen/cli": "2.13.1",
     "@graphql-codegen/gql-tag-operations-preset": "1.6.0",
+    "@nx/eslint": "18.2.1",
+    "@nx/next": "18.2.1",
+    "eslint": "~8.57.0",
     "gradient-string": "2.0.2",
     "graphql": "16.6.0",
     "husky": "7.0.4",
     "lint-staged": "12.5.0",
+    "nx": "18.2.1",
     "prettier": "2.7.1",
     "progress": "2.0.3"
   },
@@ -18,8 +22,13 @@
     "prepare": "husky install",
     "codegen": "graphql-codegen",
     "codegen:fetch": "node --no-warnings scripts/fetchGraphQLSchema ",
-    "codegen:watch": "yarn run codegen -- --watch",
-    "prebuild": "yarn run codegen",
-    "build": "yarn workspaces run build"
+    "codegen:watch": "nx run codegen -- --watch",
+    "prebuild": "nx run codegen",
+    "build": "nx run-many --target build --all"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   }
 }
